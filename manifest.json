@@ -1,11 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "SEO Analyzer by Slim SEO",
-  "version": "1.0.1",
-  "description": "Analyze your page and provide a SEO report.",
+  "name": "SEO Analyzer Tools by SEEDO Media",
+  "version": "1.0.0",
+  "description": "Comprehensive SEO analysis with issues detection and data export tools. Based on the excellent SEO Analyzer by Slim SEO.",
+  "author": "SEEDO Media",
+  "homepage_url": "https://seedo.media",
   "browser_specific_settings": {
     "gecko": {
-      "id": "seo-analyzer@wpslimseo.com"
+      "id": "seatools@seedo.media"
     }
   },
   "icons": {
@@ -21,7 +23,7 @@
     "activeTab"
   ],
   "action": {
-    "default_title": "SEO Analyzer by Slim SEO",
+    "default_title": "SEO Analyzer Tools by SEEDO Media",
     "default_icon": {
       "16": "icons/icon-16.png",
       "32": "icons/icon-32.png",

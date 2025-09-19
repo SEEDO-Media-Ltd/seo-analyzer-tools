@@ -60,10 +60,20 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 - Handles nested schema graphs and arrays properly
 
 ### Missing Elements Checker
-- **8 SEO Checks**: Title tag (presence/length), meta description (presence/length), H1 tags (single), canonical link, og:image, structured data, alt text, viewport tag
+- **11 SEO Checks**: Title tag (presence/length), meta description (presence/length), H1 tags (single/multiple), canonical link, og:image, structured data, alt text, viewport tag
 - **Issue Types**: Critical errors (❌) and warnings (⚠️) with specific recommendations
 - **UI Design**: Consistent table-based layout with collapsible sections matching other tabs
 - **Export Integration**: Issues data included in all export formats with structured categorization
+
+### On-Page SEO Score (Planned Feature)
+- **Scoring System**: 0-100 point scale based on on-page SEO elements only
+- **Transparency**: Clear labeling as "On-Page SEO Score" with disclaimer about limitations
+- **Scoring Criteria**:
+  - **Critical Foundations (60 pts)**: Title tag (15), meta description (15), H1 tag (15), viewport tag (15)
+  - **Content Quality (25 pts)**: Title length (5), meta description length (5), single H1 (5), image alt text (10)
+  - **Advanced Optimization (15 pts)**: Canonical link (5), Open Graph image (5), structured data (5)
+- **Score Ranges**: 90-100 (Excellent), 75-89 (Good), 60-74 (Average), 40-59 (Poor), 0-39 (Very Poor)
+- **Disclaimer**: "Measures basic on-page SEO elements only. Does not include backlinks, site speed, or technical SEO."
 
 ### Export Implementation
 - **Export formats**: JSON (minified), Pretty JSON (formatted), CSV (flattened), Text Report (readable)
