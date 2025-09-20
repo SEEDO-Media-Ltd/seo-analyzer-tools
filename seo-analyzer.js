@@ -175,6 +175,99 @@
 		return issues;
 	}
 
+	function calculateOnPageSEOScore(issues) {
+		let score = 100; // Start with perfect score and deduct points
+		
+		// Group issues by category for easier processing
+		const issuesByCategory = {};
+		issues.forEach(issue => {
+			if (!issuesByCategory[issue.category]) {
+				issuesByCategory[issue.category] = [];
+			}
+			issuesByCategory[issue.category].push(issue);
+		});
+		
+		// Critical Foundations (60 points total)
+		// Title tag (15 points)
+		if (issuesByCategory['Title']) {
+			const titleIssues = issuesByCategory['Title'];
+			const hasMissingTitle = titleIssues.some(issue => issue.message.includes('Missing title'));
+			const hasLengthIssue = titleIssues.some(issue => issue.message.includes('too short') || issue.message.includes('too long'));
+			
+			if (hasMissingTitle) {
+				score -= 15; // Full deduction for missing title
+			} else if (hasLengthIssue) {
+				score -= 5; // Partial deduction for length issues
+			}
+		}
+		
+		// Meta description (15 points)
+		if (issuesByCategory['Meta Description']) {
+			const metaIssues = issuesByCategory['Meta Description'];
+			const hasMissingMeta = metaIssues.some(issue => issue.message.includes('Missing meta description'));
+			const hasLengthIssue = metaIssues.some(issue => issue.message.includes('too short') || issue.message.includes('too long'));
+			
+			if (hasMissingMeta) {
+				score -= 15; // Full deduction for missing meta description
+			} else if (hasLengthIssue) {
+				score -= 5; // Partial deduction for length issues
+			}
+		}
+		
+		// H1 tag (15 points)
+		if (issuesByCategory['Headings']) {
+			const headingIssues = issuesByCategory['Headings'];
+			const hasMissingH1 = headingIssues.some(issue => issue.message.includes('Missing H1'));
+			const hasMultipleH1 = headingIssues.some(issue => issue.message.includes('Multiple H1'));
+			
+			if (hasMissingH1) {
+				score -= 15; // Full deduction for missing H1
+			} else if (hasMultipleH1) {
+				score -= 5; // Partial deduction for multiple H1s
+			}
+		}
+		
+		// Viewport tag (15 points)
+		if (issuesByCategory['Mobile']) {
+			const mobileIssues = issuesByCategory['Mobile'];
+			const hasMissingViewport = mobileIssues.some(issue => issue.message.includes('Missing viewport'));
+			
+			if (hasMissingViewport) {
+				score -= 15; // Full deduction for missing viewport
+			}
+		}
+		
+		// Advanced Optimization (15 points total)
+		// Canonical link (5 points)
+		if (issuesByCategory['Canonical']) {
+			score -= 5;
+		}
+		
+		// Open Graph image (5 points)
+		if (issuesByCategory['Social Media']) {
+			score -= 5;
+		}
+		
+		// Structured data (5 points)
+		if (issuesByCategory['Structured Data']) {
+			score -= 5;
+		}
+		
+		// Content Quality (10 points remaining from 25 total - title/meta/h1 length already covered above)
+		// Images alt text (10 points)
+		if (issuesByCategory['Accessibility']) {
+			const accessibilityIssues = issuesByCategory['Accessibility'];
+			const hasAltTextIssues = accessibilityIssues.some(issue => issue.message.includes('without alt text'));
+			
+			if (hasAltTextIssues) {
+				score -= 10; // Full deduction for missing alt text
+			}
+		}
+		
+		// Ensure score doesn't go below 0
+		return Math.max(0, score);
+	}
+
 
 	// --- Rendering Functions ---
 	function renderKeyValue( table, key, value, depth = 0, forceLink = false ) {
@@ -404,6 +497,32 @@
 		summaryTr.appendChild( summaryTh );
 		summaryTr.appendChild( summaryTd );
 		summaryTable.appendChild( summaryTr );
+		
+		// Calculate and display On-Page SEO Score
+		const score = calculateOnPageSEOScore(issues);
+		const scoreRow = document.createElement( 'tr' );
+		scoreRow.className = 'border-0 border-b border-solid border-gray-300';
+		
+		const scoreTh = document.createElement( 'th' );
+		scoreTh.className = 'text-left p-2 w-48';
+		scoreTh.textContent = 'On-Page SEO Score';
+		
+		const scoreTd = document.createElement( 'td' );
+		scoreTd.className = 'p-2';
+		
+		let scoreColor = '#10b981'; // green
+		let scoreLabel = 'Excellent';
+		if (score < 90) { scoreColor = '#f59e0b'; scoreLabel = 'Good'; }
+		if (score < 75) { scoreColor = '#f97316'; scoreLabel = 'Average'; }
+		if (score < 60) { scoreColor = '#ef4444'; scoreLabel = 'Poor'; }
+		if (score < 40) { scoreColor = '#dc2626'; scoreLabel = 'Very Poor'; }
+		
+		scoreTd.innerHTML = `<strong style="color: ${scoreColor}; font-size: 18px;">${score}/100</strong> <span style="color: ${scoreColor};">(${scoreLabel})</span>
+			<br><small style="color: #6b7280; font-style: italic;">Measures basic on-page SEO elements only. Does not include backlinks, site speed, or technical SEO.</small>`;
+		
+		scoreRow.appendChild( scoreTh );
+		scoreRow.appendChild( scoreTd );
+		summaryTable.appendChild( scoreRow );
 		container.appendChild( summaryTable );
 		
 		// Render critical issues in collapsible section

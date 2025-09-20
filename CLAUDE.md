@@ -84,6 +84,18 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 - **Shadow DOM events**: Uses `shadowRoot.addEventListener()` for proper event handling
 - **Download mechanism**: Creates temporary blob URLs and triggers downloads via hidden anchor elements
 
+### Monetization Exploration (ExtPay Integration)
+- **ExtPay Library**: JavaScript library for browser extension monetization via ExtensionPay.com
+- **Integration Requirements**: `storage` permission, background script initialization, user status checking
+- **Potential Premium Features**:
+  - **Advanced SEO Scoring**: More detailed analysis and recommendations
+  - **Historical Tracking**: Save and compare SEO data over time for same URLs
+  - **Bulk Export**: Export data from multiple pages/sessions
+  - **Competitor Analysis**: Compare current page with competitor URLs
+  - **Custom Reports**: Branded PDF reports with detailed insights
+- **Pricing Strategy**: Free tier (basic features) + Premium tier ($2.99/month)
+- **Implementation**: Check `extpay.getUser().paid` status to enable/disable premium features
+
 ## Development Structure
 - `dist/` - Clean distribution folder (excluded from git)
-- `seo-analyzer-extension-v1.0.1.zip` - Packaged extension ready for browser stores
+- `seo-analyzer-tools-by-seedo-media-v1.0.0.zip` - Current packaged extension with On-Page SEO Score
