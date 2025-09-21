@@ -102,24 +102,37 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 
 ## Development Notes & Debugging
 
-### ExtPay Integration Attempt (Failed)
-**Issue**: Extension appeared "corrupt" after adding ExtPay integration
-**Root Cause**: TBD - needs incremental testing
-**Changes Made**:
-- Added `storage` permission to manifest.json
-- Added ExtPay.js library file  
-- Modified background.js to import/initialize ExtPay
-- Modified seo-analyzer.js with premium gating logic
+### ExtPay Integration Progress
+**Status**: Partially implemented - Premium UI working, need proper background/content communication
 
-**Debugging Strategy**:
-1. Start with working baseline (`seo-analyzer-tools-clean-v1.0.0.zip`)
-2. Add changes incrementally and test after each:
-   - Add storage permission → test
-   - Add ExtPay.js file → test
-   - Add background.js ExtPay init → test  
-   - Add content script ExtPay code → test
-3. Identify which specific change causes corruption
+**Completed**:
+- ✅ Added `storage` permission to manifest.json
+- ✅ Added ExtPay.js library (using development stub)
+- ✅ Background.js ExtPay initialization with error handling
+- ✅ Premium gating UI with upgrade prompt in main panel
+- ✅ Dual pricing: $1.99/month (`seoa-tools-monthly`) + $25 lifetime (`seoa-tools-lifetime`)
+- ✅ Feature description with external link to https://seedo.media/seo-analyzer-tools
+- ✅ Inline styling for Shadow DOM compatibility
 
-**Git Recovery**:
-- Used `git restore` to revert modified files to last working state
-- Rebuilt clean dist/ folder from reverted source files
+**Current Issue**: 
+ExtPay not available in content script context - test accounts not being detected
+
+**Next Steps**:
+1. **Update Background Script**:
+   - Add `browser.runtime.onMessage` listener for `checkPremiumAccess`
+   - Add message handler for `openPaymentPage` requests
+   - Properly expose ExtPay functionality to content script
+
+2. **Update Content Script**:
+   - Replace direct ExtPay calls with `browser.runtime.sendMessage()`
+   - Modify `checkPremiumAccess()` to use background script communication
+   - Update upgrade button handlers to send messages
+
+3. **Test & Deploy**:
+   - Verify ExtPay detects test accounts from dashboard
+   - Replace ExtPay.js stub with real library from ExtensionPay.com
+   - Test premium feature unlocking for paid/trial users
+
+4. **Final Package**:
+   - Remove debug console statements
+   - Create production-ready ZIP with real ExtPay integration
