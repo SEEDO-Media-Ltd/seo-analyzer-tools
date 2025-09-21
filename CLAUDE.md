@@ -98,4 +98,28 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 
 ## Development Structure
 - `dist/` - Clean distribution folder (excluded from git)
-- `seo-analyzer-tools-by-seedo-media-v1.0.0.zip` - Current packaged extension with On-Page SEO Score
+- `seo-analyzer-tools-clean-v1.0.0.zip` - **WORKING BASELINE** - Extension with On-Page SEO Score, no ExtPay
+
+## Development Notes & Debugging
+
+### ExtPay Integration Attempt (Failed)
+**Issue**: Extension appeared "corrupt" after adding ExtPay integration
+**Root Cause**: TBD - needs incremental testing
+**Changes Made**:
+- Added `storage` permission to manifest.json
+- Added ExtPay.js library file  
+- Modified background.js to import/initialize ExtPay
+- Modified seo-analyzer.js with premium gating logic
+
+**Debugging Strategy**:
+1. Start with working baseline (`seo-analyzer-tools-clean-v1.0.0.zip`)
+2. Add changes incrementally and test after each:
+   - Add storage permission → test
+   - Add ExtPay.js file → test
+   - Add background.js ExtPay init → test  
+   - Add content script ExtPay code → test
+3. Identify which specific change causes corruption
+
+**Git Recovery**:
+- Used `git restore` to revert modified files to last working state
+- Rebuilt clean dist/ folder from reverted source files
