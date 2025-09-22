@@ -20,7 +20,8 @@
   },
   "permissions": [
     "scripting",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "action": {
     "default_title": "SEO Analyzer Tools by SEEDO Media",
@@ -35,6 +36,7 @@
   },
   "background": {
     "scripts": [
+      "ExtPay.js",
       "background.js"
     ]
   }

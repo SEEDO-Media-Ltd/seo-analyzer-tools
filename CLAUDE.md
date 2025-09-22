@@ -2,6 +2,16 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Development Workflow
+
+**IMPORTANT**: All development follows this workflow:
+1. **Edit source files in ROOT folder** (manifest.json, seo-analyzer.js, background.js, etc.)
+2. **Copy/compile changes to `/dist` folder** for testing
+3. **Create .zip from `/dist` folder** for browser extension testing
+4. **Load unpacked extension** from `/dist` folder in browser developer mode
+
+The `/dist` folder contains the compiled/ready-to-test version of the extension. Always ensure changes are copied from root to `/dist` before testing.
+
 ## Project Overview
 
 This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web pages for SEO-related information. The extension is built using Manifest V3 for modern browser compatibility.
@@ -103,36 +113,76 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 ## Development Notes & Debugging
 
 ### ExtPay Integration Progress
-**Status**: Partially implemented - Premium UI working, need proper background/content communication
+**Status**: ✅ **COMPLETED** - Real ExtPay.js integrated with background/content messaging
 
 **Completed**:
 - ✅ Added `storage` permission to manifest.json
-- ✅ Added ExtPay.js library (using development stub)
-- ✅ Background.js ExtPay initialization with error handling
+- ✅ **Real ExtPay.js library** loaded from GitHub (52KB) replacing stub
+- ✅ Background.js ExtPay initialization using `fetch() + eval()` (Firefox MV3 compatible)
+- ✅ Browser messaging system for background ↔ content script communication
 - ✅ Premium gating UI with upgrade prompt in main panel
 - ✅ Dual pricing: $1.99/month (`seoa-tools-monthly`) + $25 lifetime (`seoa-tools-lifetime`)
 - ✅ Feature description with external link to https://seedo.media/seo-analyzer-tools
 - ✅ Inline styling for Shadow DOM compatibility
+- ✅ Extension description updated with GPL-3.0 license and repository link
 
-**Current Issue**: 
-ExtPay not available in content script context - test accounts not being detected
+**Technical Implementation**:
+- **Background Script**: Loads real ExtPay via `fetch(browser.runtime.getURL('ExtPay.js'))` + eval()
+- **Message Handlers**: `checkPremiumAccess` and `openPaymentPage` actions
+- **Content Script**: Uses `browser.runtime.sendMessage()` for ExtPay communication
+- **Premium Logic**: `user.paid || user.trialStartedAt` determines access level
+- **Error Handling**: Graceful fallback when ExtPay unavailable
+
+**Ready for Testing**:
+- Real ExtPay integration active with extension ID 'seo-analyzer-tools'
+- Compatible with Firefox Manifest V3 architecture
+- Test accounts from ExtensionPay.com dashboard should be detected
+- Premium features (export dropdown) unlocked for paid/trial users
+
+## Current Issues & Debugging (Latest Session)
+
+### Account Tab DOM Insertion Error
+**Status**: ❌ **UNRESOLVED** - Account tab not appearing due to DOM insertion error
+
+**Problem**: Account tab functionality broken with DOM insertion error:
+```
+Node.insertBefore: Child to insert before is not a child of this node
+```
+
+**Error Location**: Line 1064 in `addAccountTab()` function:
+```javascript
+tabsContainer.parentNode.insertBefore(accountPipeSeparator, closeButton);
+```
+
+**Attempted Fixes** (v16-v19):
+- ❌ Updated function signature to match v15: `addAccountTab(user, tabsContainer, panel, setupTabSwitching)`
+- ❌ Changed DOM insertion logic to use `tabsContainer.parentNode.insertBefore()` directly
+- ❌ Added conditional setupTabSwitching logic
+- ❌ Multiple zip compilations and testing iterations
+
+**DOM Structure Analysis**:
+```
+header
+  ├── tabsContainer (contains Meta Tags | Schemas | Issues | Export tabs)
+  └── closeButton (title="Close Analyzer")
+```
+
+**Root Cause**: The error suggests `closeButton` is not actually a child of `tabsContainer.parentNode` when `addAccountTab` is called, indicating a scope or timing issue in DOM element relationships.
+
+**Working Reference**: v15 version in `/seo-analyzer-tools-v15-for-reference/` contains exact same DOM insertion logic but functions correctly.
 
 **Next Steps**:
-1. **Update Background Script**:
-   - Add `browser.runtime.onMessage` listener for `checkPremiumAccess`
-   - Add message handler for `openPaymentPage` requests
-   - Properly expose ExtPay functionality to content script
+- Need systematic debugging of actual DOM structure at runtime
+- Consider direct reference storage instead of querySelector approach
+- May require rollback to working v15 baseline and incremental changes
 
-2. **Update Content Script**:
-   - Replace direct ExtPay calls with `browser.runtime.sendMessage()`
-   - Modify `checkPremiumAccess()` to use background script communication
-   - Update upgrade button handlers to send messages
+### Export Tab Improvements
+**Status**: ✅ **COMPLETED** - Export styling and structure fixed
 
-3. **Test & Deploy**:
-   - Verify ExtPay detects test accounts from dashboard
-   - Replace ExtPay.js stub with real library from ExtensionPay.com
-   - Test premium feature unlocking for paid/trial users
+**Completed**:
+- ✅ Updated `createExportOptions()` function to match v15 with proper button structure
+- ✅ Added missing CSS classes `.mb-0` and `.hover:opacity-80`
+- ✅ Export tab now displays individual buttons instead of single dropdown
+- ✅ Maintains premium gating functionality with ExtPay integration
 
-4. **Final Package**:
-   - Remove debug console statements
-   - Create production-ready ZIP with real ExtPay integration
+**Current State**: Export functionality working correctly with improved UI matching v15 reference

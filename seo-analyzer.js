@@ -13,10 +13,82 @@
 	}
 
 	function getStyles() {
-		return `.fixed{position:fixed}.relative{position:relative}.right-0{right:0}.top-0{top:0}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.table{display:table}.hidden{display:none}.h-full{height:100%}.w-48{width:12rem}.w-full{width:100%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-4{gap:1rem}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.border{border-width:1px}.border-0{border-width:0}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-solid{border-style:solid}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-2{padding:.5rem}.p-4{padding:1rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-left{text-align:left}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-lg{font-size:18px}.text-sm{font-size:14px}.font-bold{font-weight:700}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.text-accent{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-inherit{color:inherit}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.indent-4{text-indent:1rem}.indent-8{text-indent:2rem}.indent-12{text-indent:3rem}.indent-16{text-indent:4rem}.indent-20{text-indent:5rem}.indent-24{text-indent:6rem}:host{--color-gray-300:#d1d5db}*{box-sizing:border-box;margin:0;padding:0}ul{list-stype:none}#panel{width:500px;max-width:95vw}details[open] summary{border-bottom:1px solid var(--color-gray-300)}tr:last-child{border-bottom:none}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}`;
+		return `.fixed{position:fixed}.relative{position:relative}.right-0{right:0}.top-0{top:0}.mb-0{margin-bottom:0}.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.table{display:table}.hidden{display:none}.h-full{height:100%}.w-48{width:12rem}.w-full{width:100%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-1{gap:.25rem}.gap-4{gap:1rem}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.border{border-width:1px}.border-0{border-width:0}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-solid{border-style:solid}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.bg-accent{--tw-bg-opacity:1;background-color:rgb(239 122 55/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-2{padding:.5rem}.p-4{padding:1rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-lg{font-size:18px}.text-sm{font-size:14px}.font-bold{font-weight:700}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.text-accent{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-inherit{color:inherit}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.indent-4{text-indent:1rem}.indent-8{text-indent:2rem}.indent-12{text-indent:3rem}.indent-16{text-indent:4rem}.indent-20{text-indent:5rem}.indent-24{text-indent:6rem}:host{--color-gray-300:#d1d5db}*{box-sizing:border-box;margin:0;padding:0}ul{list-stype:none}#panel{width:500px;max-width:95vw}details[open] summary{border-bottom:1px solid var(--color-gray-300)}tr:last-child{border-bottom:none}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.hover\:opacity-80:hover{opacity:0.8}`;
 	}
 
 	const isPlainObject = obj => obj !== null && typeof obj === 'object' && Object.getPrototypeOf( obj ) === Object.prototype;
+
+	// --- Premium/ExtPay Functions ---
+	let premiumStatus = { hasPremium: false, user: null, checked: false };
+
+	async function checkPremiumAccess() {
+		if (premiumStatus.checked) {
+			return premiumStatus;
+		}
+
+		try {
+			const response = await browser.runtime.sendMessage({ action: 'checkPremiumAccess' });
+			premiumStatus = { ...response, checked: true };
+			return premiumStatus;
+		} catch (error) {
+			console.error('Failed to check premium access:', error);
+			premiumStatus = { hasPremium: false, user: null, checked: true, error: error.message };
+			return premiumStatus;
+		}
+	}
+
+	function openPaymentPage() {
+		browser.runtime.sendMessage({ action: 'openPaymentPage' });
+	}
+
+	function createPremiumUpgradePrompt() {
+		const upgradeDiv = document.createElement('div');
+		upgradeDiv.className = 'p-4 border border-solid border-gray-300 bg-gray-50 rounded text-center';
+
+		// Title
+		const title = document.createElement('div');
+		title.className = 'mb-4 font-bold text-lg';
+		title.textContent = '🚀 Unlock Export Features';
+		upgradeDiv.appendChild(title);
+
+		// Description
+		const description = document.createElement('div');
+		description.className = 'mb-4 text-sm text-gray-700';
+		description.textContent = 'Export your SEO data in multiple formats (JSON, CSV, Text Reports)';
+		upgradeDiv.appendChild(description);
+
+		// Pricing
+		const pricing = document.createElement('div');
+		pricing.className = 'mb-4 text-sm text-gray-700';
+		pricing.innerHTML = '<strong>$1.99/month</strong> or <strong>$25 lifetime</strong>';
+		upgradeDiv.appendChild(pricing);
+
+		// Button container
+		const buttonContainer = document.createElement('div');
+		buttonContainer.className = 'flex items-center justify-center gap-4';
+
+		// Upgrade button
+		const upgradeBtn = document.createElement('button');
+		upgradeBtn.className = 'px-4 py-2 bg-accent text-white font-bold rounded cursor-pointer border-0';
+		upgradeBtn.textContent = 'Upgrade Now';
+		upgradeBtn.addEventListener('click', () => {
+			openPaymentPage();
+		});
+
+		// Learn more link
+		const learnMoreLink = document.createElement('a');
+		learnMoreLink.href = 'https://seedo.media/seo-analyzer-tools';
+		learnMoreLink.target = '_blank';
+		learnMoreLink.className = 'text-sm text-gray-700';
+		learnMoreLink.textContent = 'Learn More';
+
+		buttonContainer.appendChild(upgradeBtn);
+		buttonContainer.appendChild(learnMoreLink);
+		upgradeDiv.appendChild(buttonContainer);
+
+		return upgradeDiv;
+	}
+
 
 	// --- Data Fetching Functions ---
 	function getMetaTags() {
@@ -634,6 +706,7 @@
 		// Create the host element
 		const host = document.createElement( 'div' );
 		host.id = `${ ANALYZER_ID }-host`; // Unique ID for the host in the main DOM
+		host.setAttribute('data-sa-analyzer', 'host'); // Add data attribute for shadowRoot access
 		host.style.position = 'fixed'; // Position host relative to viewport
 		host.style.top = '0';
 		host.style.right = '0';
@@ -681,55 +754,23 @@
 		pipeSeparator.className = 'py-4 text-gray-700';
 		pipeSeparator.textContent = ' | ';
 
-		// Export functionality - make it a direct tab element like others
-		const exportLink = document.createElement( 'button' );
-		exportLink.className = 'tab bg-transparent border-0 transition-all py-4 cursor-pointer font-bold text-gray-700 hover:text-accent relative';
-		exportLink.textContent = 'Export';
-		exportLink.title = 'Export SEO data';
-
-		const exportDropdown = document.createElement( 'div' );
-		exportDropdown.className = 'absolute right-0 mt-1 bg-white border border-solid border-gray-300 rounded shadow-xl hidden';
-		exportDropdown.style.minWidth = '140px';
-		exportDropdown.style.zIndex = '1000';
-		exportDropdown.style.position = 'absolute';
-		exportDropdown.style.top = '100%';
-
-		const exportOptions = [
-			{ label: 'JSON', format: 'json' },
-			{ label: 'Pretty JSON', format: 'pretty-json' },
-			{ label: 'CSV', format: 'csv' },
-			{ label: 'Text Report', format: 'text' }
-		];
-
-		exportOptions.forEach( option => {
-			const optionButton = document.createElement( 'button' );
-			optionButton.className = 'block w-full text-left px-3 py-2 text-sm bg-transparent border-0 cursor-pointer hover:bg-gray-50';
-			optionButton.textContent = option.label;
-			optionButton.addEventListener( 'click', () => {
-				exportData( option.format );
-				exportDropdown.classList.add( 'hidden' );
-			} );
-			exportDropdown.appendChild( optionButton );
-		} );
-
-		exportLink.addEventListener( 'click', () => {
-			exportDropdown.classList.toggle( 'hidden' );
-		} );
-
-		// Close dropdown when clicking outside (use shadowRoot for proper event handling)
-		shadowRoot.addEventListener( 'click', ( e ) => {
-			if ( !exportLink.contains( e.target ) && !exportDropdown.contains( e.target ) ) {
-				exportDropdown.classList.add( 'hidden' );
-			}
-		} );
-
-		exportLink.appendChild( exportDropdown );
+		// Export functionality - make it a proper tab like others
+		const exportTab = document.createElement( 'button' );
+		exportTab.className = 'tab bg-transparent border-0 transition-all py-4 cursor-pointer font-bold text-gray-700 hover:text-accent';
+		exportTab.dataset.tab = 'export';
+		exportTab.textContent = 'Export';
+		exportTab.title = 'Export SEO data';
+		console.log('Export tab created:', exportTab);
 
 		tabsContainer.appendChild( metaTab );
 		tabsContainer.appendChild( schemaTab );
 		tabsContainer.appendChild( issuesTab );
 		tabsContainer.appendChild( pipeSeparator );
-		tabsContainer.appendChild( exportLink );
+		tabsContainer.appendChild( exportTab );
+
+		// Account tab (will be added dynamically for premium users)
+		let accountTab = null;
+		let accountPane = null;
 
 		const closeButton = document.createElement( 'button' );
 		closeButton.className = 'bg-transparent border-0 cursor-pointer p-2 text-inherit text-lg leading-none';
@@ -753,6 +794,11 @@
 		issuesPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
 		issuesPane.innerHTML = `<em class="text-muted">Analyzing SEO Issues...</em>`;
 
+		const exportPane = document.createElement( 'div' );
+		exportPane.dataset.tab = 'export';
+		exportPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
+		exportPane.innerHTML = `<em class="text-muted">Loading Export Options...</em>`;
+
 		// Assemble Panel
 		header.appendChild( tabsContainer );
 		header.appendChild( closeButton );
@@ -760,6 +806,7 @@
 		panel.appendChild( metaTagsPane );
 		panel.appendChild( schemasPane );
 		panel.appendChild( issuesPane );
+		panel.appendChild( exportPane );
 		shadowRoot.appendChild( panel );
 
 		// Render initial content.
@@ -771,7 +818,7 @@
 		document.body.appendChild( host );
 
 		// Tab switching logic
-		[ metaTab, schemaTab, issuesTab ].forEach( tab => tab.addEventListener( 'click', () => {
+		[ metaTab, schemaTab, issuesTab, exportTab ].forEach( tab => tab.addEventListener( 'click', async () => {
 			shadowRoot.querySelectorAll( '.tab' ).forEach( t => {
 				t.classList.remove( 'text-accent' );
 				t.classList.add( 'text-gray-700' );
@@ -780,10 +827,300 @@
 			tab.classList.add( 'text-accent' );
 
 			shadowRoot.querySelectorAll( '.pane' ).forEach( p => p.classList.add( 'hidden' ) );
+
+			// Special handling for Export tab
+			if (tab.dataset.tab === 'export') {
+				await renderExportPane(exportPane);
+			}
+
 			shadowRoot.querySelector( `.pane[data-tab=${ tab.dataset.tab }]` ).classList.remove( 'hidden' );
 		} ) );
 	}
 
+	// --- Export Pane Rendering ---
+	async function renderExportPane(container) {
+		console.log('renderExportPane called');
+		try {
+			const premium = await checkPremiumAccess();
+			console.log('Premium status for export pane:', premium);
+
+			if (!premium.hasPremium) {
+				// Show upgrade prompt for free users
+				container.innerHTML = '';
+				const upgradeContent = createPremiumUpgradePrompt();
+				container.appendChild(upgradeContent);
+			} else {
+				// Show export options for premium users
+				container.innerHTML = '';
+				const exportOptionsDiv = createExportOptions();
+				container.appendChild(exportOptionsDiv);
+
+				// Add Account tab for premium users if not already added
+				if (premium.user && !dynamicAccountTab) {
+					const shadowRoot = document.querySelector('[data-sa-analyzer]').shadowRoot;
+					const tabsContainer = shadowRoot.querySelector('div').querySelector('div'); // Header div contains tabs
+					const panel = shadowRoot.querySelector('#panel');
+					// Note: setupTabSwitching is not available in this scope, so passing null
+					addAccountTab(premium.user, tabsContainer, panel, null);
+				}
+			}
+		} catch (error) {
+			console.error('Error in renderExportPane:', error);
+			container.innerHTML = '<p>Error loading export options.</p>';
+		}
+	}
+
+	function createExportOptions() {
+		const optionsDiv = document.createElement('div');
+
+		// Title
+		const title = document.createElement('h3');
+		title.className = 'text-lg font-bold mb-4';
+		title.textContent = 'Export SEO Data';
+		optionsDiv.appendChild(title);
+
+		// Description and info container
+		const descriptionContainer = document.createElement('div');
+		descriptionContainer.className = 'p-4 border border-solid border-gray-300 bg-gray-50 rounded mb-4';
+
+		const description = document.createElement('p');
+		description.className = 'text-gray-700 mb-4';
+		description.textContent = 'Transform your SEO analysis into actionable insights with our comprehensive export options. Each format is optimized for different use cases:';
+		descriptionContainer.appendChild(description);
+
+		const infoNote = document.createElement('p');
+		infoNote.className = 'text-sm text-gray-700 mb-0';
+		infoNote.innerHTML = '<strong>All exports include:</strong> Meta tags, structured data schemas, SEO issues analysis, and timestamp information.';
+		descriptionContainer.appendChild(infoNote);
+
+		optionsDiv.appendChild(descriptionContainer);
+
+		const exportOptions = [
+			{
+				label: 'JSON (Minified)',
+				format: 'json',
+				description: 'Perfect for developers and API integration. Compact format ideal for automated processing and data pipelines.'
+			},
+			{
+				label: 'Pretty JSON',
+				format: 'pretty-json',
+				description: 'Human-readable format with proper indentation. Great for manual review, debugging, and sharing with technical teams.'
+			},
+			{
+				label: 'CSV Spreadsheet',
+				format: 'csv',
+				description: 'Import directly into Excel, Google Sheets, or data analysis tools. Flattened structure makes it easy to create charts and pivot tables.'
+			},
+			{
+				label: 'Text Report',
+				format: 'text',
+				description: 'Professional, readable format perfect for client reports, documentation, and non-technical stakeholders.'
+			}
+		];
+
+		exportOptions.forEach(option => {
+			const optionDiv = document.createElement('div');
+			optionDiv.className = 'p-4 border border-solid border-gray-300 rounded mb-4';
+
+			const labelDiv = document.createElement('div');
+			labelDiv.className = 'font-bold mb-2';
+			labelDiv.textContent = option.label;
+
+			const descDiv = document.createElement('div');
+			descDiv.className = 'text-sm text-gray-700 mb-4';
+			descDiv.textContent = option.description;
+
+			// Add export button
+			const exportButton = document.createElement('button');
+			exportButton.className = 'px-4 py-2 bg-accent text-white font-bold rounded cursor-pointer border-0 transition-all hover:opacity-80';
+			exportButton.textContent = `Export ${option.label}`;
+			exportButton.addEventListener('click', () => {
+				exportData(option.format);
+			});
+
+			optionDiv.appendChild(labelDiv);
+			optionDiv.appendChild(descDiv);
+			optionDiv.appendChild(exportButton);
+
+			optionsDiv.appendChild(optionDiv);
+		});
+
+		return optionsDiv;
+	}
+
+	function createAccountContent(user) {
+		const accountDiv = document.createElement('div');
+
+		// Title
+		const title = document.createElement('h3');
+		title.className = 'text-lg font-bold mb-4';
+		title.textContent = 'Account Information';
+		accountDiv.appendChild(title);
+
+		// Thank you message
+		const thankYou = document.createElement('div');
+		thankYou.className = 'p-4 border border-solid border-gray-300 bg-gray-50 rounded mb-4';
+		thankYou.innerHTML = `
+			<div class="font-bold mb-2">✨ Thank you for supporting SEO Analyzer Tools!</div>
+			<div class="text-sm text-gray-700">Your subscription helps us continue improving and adding new features.</div>
+		`;
+		accountDiv.appendChild(thankYou);
+
+		// Account details table
+		const table = document.createElement('table');
+		table.className = 'border-collapse w-full mb-4';
+
+		const details = [
+			{ label: 'Email', value: user.email || 'Not provided' },
+			{ label: 'Account Status', value: user.paid ? '✅ Premium' : '⚠️ Free' },
+			{ label: 'Member Since', value: user.installedAt ? new Date(user.installedAt).toLocaleDateString() : 'Unknown' }
+		];
+
+		if (user.paidAt) {
+			details.push({ label: 'Premium Since', value: new Date(user.paidAt).toLocaleDateString() });
+		}
+
+		details.forEach(detail => {
+			const tr = document.createElement('tr');
+			tr.className = 'border-0 border-b border-solid border-gray-300';
+
+			const th = document.createElement('th');
+			th.className = 'text-left p-2 w-48';
+			th.textContent = detail.label;
+
+			const td = document.createElement('td');
+			td.className = 'p-2';
+			td.textContent = detail.value;
+
+			tr.appendChild(th);
+			tr.appendChild(td);
+			table.appendChild(tr);
+		});
+
+		accountDiv.appendChild(table);
+
+		// Action buttons
+		const buttonContainer = document.createElement('div');
+		buttonContainer.className = 'flex gap-4 mb-4';
+
+		// Manage Account button
+		const manageBtn = document.createElement('button');
+		manageBtn.className = 'px-4 py-2 bg-accent text-white font-bold rounded cursor-pointer border-0';
+		manageBtn.textContent = 'Manage Account';
+		manageBtn.addEventListener('click', () => {
+			browser.runtime.sendMessage({ action: 'openPaymentPage' });
+		});
+
+		// Logout button
+		const logoutBtn = document.createElement('button');
+		logoutBtn.className = 'px-4 py-2 border border-solid border-gray-300 text-gray-700 font-bold rounded cursor-pointer bg-white';
+		logoutBtn.textContent = 'Logout';
+		logoutBtn.addEventListener('click', () => {
+			// Clear ExtPay cache
+			premiumStatus = { hasPremium: false, user: null, checked: false };
+			// Hide account tab and refresh UI
+			removeAccountTab();
+		});
+
+		buttonContainer.appendChild(manageBtn);
+		buttonContainer.appendChild(logoutBtn);
+		accountDiv.appendChild(buttonContainer);
+
+		return accountDiv;
+	}
+
+	// Global variables to track dynamic elements
+	let dynamicAccountTab = null;
+	let dynamicAccountPane = null;
+	let currentTabsContainer = null;
+	let currentPanel = null;
+
+	function addAccountTab(user, tabsContainer, panel, setupTabSwitching) {
+		if (dynamicAccountTab) return; // Already added
+
+		// Create account tab
+		const accountPipeSeparator = document.createElement('span');
+		accountPipeSeparator.className = 'py-4 text-gray-700';
+		accountPipeSeparator.textContent = ' | ';
+		accountPipeSeparator.setAttribute('data-account-element', 'true');
+
+		dynamicAccountTab = document.createElement('button');
+		dynamicAccountTab.className = 'tab bg-transparent border-0 transition-all py-4 cursor-pointer font-bold text-gray-700 hover:text-accent';
+		dynamicAccountTab.dataset.tab = 'account';
+		dynamicAccountTab.textContent = 'Account';
+		dynamicAccountTab.title = 'Account information';
+		dynamicAccountTab.setAttribute('data-account-element', 'true');
+
+		// Create account pane
+		dynamicAccountPane = document.createElement('div');
+		dynamicAccountPane.dataset.tab = 'account';
+		dynamicAccountPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
+		dynamicAccountPane.setAttribute('data-account-element', 'true');
+
+		// Insert Account tab in correct position (before close button)
+		// Find the close button and insert before it
+		const closeButton = tabsContainer.parentNode.querySelector('button[title="Close Analyzer"]');
+		if (closeButton) {
+			tabsContainer.parentNode.insertBefore(accountPipeSeparator, closeButton);
+			tabsContainer.parentNode.insertBefore(dynamicAccountTab, closeButton);
+		} else {
+			// Fallback: add to tabs container
+			tabsContainer.appendChild(accountPipeSeparator);
+			tabsContainer.appendChild(dynamicAccountTab);
+		}
+		panel.appendChild(dynamicAccountPane);
+
+		// Store references
+		currentTabsContainer = tabsContainer;
+		currentPanel = panel;
+
+		// Re-setup tab switching to include the new Account tab
+		if (setupTabSwitching) {
+			setupTabSwitching();
+		} else {
+			// Fallback: use the existing listener approach
+			addAccountTabListener();
+		}
+	}
+
+	function removeAccountTab() {
+		// Remove all account-related elements
+		const accountElements = document.querySelectorAll('[data-account-element="true"]');
+		accountElements.forEach(el => el.remove());
+
+		dynamicAccountTab = null;
+		dynamicAccountPane = null;
+	}
+
+	function addAccountTabListener() {
+		if (!dynamicAccountTab) return;
+
+		dynamicAccountTab.addEventListener('click', async () => {
+			const shadowRoot = document.querySelector('[data-sa-analyzer]').shadowRoot;
+
+			// Update tab styles
+			shadowRoot.querySelectorAll('.tab').forEach(t => {
+				t.classList.remove('text-accent');
+				t.classList.add('text-gray-700');
+			});
+			dynamicAccountTab.classList.remove('text-gray-700');
+			dynamicAccountTab.classList.add('text-accent');
+
+			// Hide all panes
+			shadowRoot.querySelectorAll('.pane').forEach(p => p.classList.add('hidden'));
+
+			// Render account content
+			const premium = await checkPremiumAccess();
+			if (premium.hasPremium && premium.user) {
+				dynamicAccountPane.innerHTML = '';
+				const accountContent = createAccountContent(premium.user);
+				dynamicAccountPane.appendChild(accountContent);
+			}
+
+			// Show account pane
+			dynamicAccountPane.classList.remove('hidden');
+		});
+	}
 
 	// --- Export Functions ---
 	function generateFilename( format ) {
@@ -958,7 +1295,13 @@
 				} );
 			}
 		}
-		
+
+		// Add footer
+		lines.push( '' );
+		lines.push( '========================' );
+		lines.push( `Generated with SEO Analyzer Tools` );
+		lines.push( `${ new Date().toLocaleString() }` );
+
 		return lines.join( '\n' );
 	}
 
