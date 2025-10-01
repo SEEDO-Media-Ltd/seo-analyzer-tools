@@ -1,22 +1,17 @@
-# Distribution folder (excluded per CLAUDE.md - /dist is for testing only)
+# Build and distribution
 dist/
 
-# Old versions and archives
-old zips/
+# Archives and releases
 *.zip
 
-# Reference folders
-*-for-reference/
-
-# macOS
+# macOS system files
 .DS_Store
 
-# Temporary files
+# Temporary/working files
 icon.acorn
 icon.png
-icons_orginal/
 
 # Private documentation
-CHANGELOG.md
-CLAUDE.md
-seo-analyzer-ideas.md
+*.md
+!README.md
+!PRIVACY.md
