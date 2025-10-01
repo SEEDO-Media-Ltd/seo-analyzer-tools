@@ -476,23 +476,28 @@
 		// Add validator links at the top
 		const validatorLinksDiv = document.createElement( 'div' );
 		validatorLinksDiv.className = 'mb-4 flex items-center gap-4';
-		validatorLinksDiv.innerHTML = `
-			<strong>Validate:</strong>
-			<a class="flex items-center gap-1" href="https://search.google.com/test/rich-results?url=${ encodedUrl }" target="_blank" rel="noopener noreferrer">
-				Google Rich Results
-				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-					<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-					<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-				</svg>
-			</a>
-			<a class="flex items-center gap-1" href="https://validator.schema.org/#url=${ encodedUrl }" target="_blank" rel="noopener noreferrer">
-				Schema.org
-				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-					<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-					<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-				</svg>
-			</a>
-		`;
+		// Build validator links with DOM methods (safer than innerHTML)
+		const validateLabel = document.createElement('strong');
+		validateLabel.textContent = 'Validate:';
+		validatorLinksDiv.appendChild(validateLabel);
+
+		// Google Rich Results link
+		const googleLink = document.createElement('a');
+		googleLink.className = 'flex items-center gap-1';
+		googleLink.href = `https://search.google.com/test/rich-results?url=${encodedUrl}`;
+		googleLink.target = '_blank';
+		googleLink.rel = 'noopener noreferrer';
+		googleLink.textContent = 'Google Rich Results';
+		validatorLinksDiv.appendChild(googleLink);
+
+		// Schema.org link
+		const schemaLink = document.createElement('a');
+		schemaLink.className = 'flex items-center gap-1';
+		schemaLink.href = `https://validator.schema.org/#url=${encodedUrl}`;
+		schemaLink.target = '_blank';
+		schemaLink.rel = 'noopener noreferrer';
+		schemaLink.textContent = 'Schema.org';
+		validatorLinksDiv.appendChild(schemaLink);
 		container.appendChild( validatorLinksDiv );
 
 		schemas.forEach( schema => {
@@ -564,7 +569,7 @@
 		
 		const summaryTd = document.createElement( 'td' );
 		summaryTd.className = 'p-2';
-		summaryTd.innerHTML = `❌ <strong>${ errors.length }</strong> Critical Issues, ⚠️ <strong>${ warnings.length }</strong> Warnings`;
+		summaryTd.textContent = `❌ ${errors.length} Critical Issues, ⚠️ ${warnings.length} Warnings`;
 		
 		summaryTr.appendChild( summaryTh );
 		summaryTr.appendChild( summaryTd );
@@ -589,8 +594,27 @@
 		if (score < 60) { scoreColor = '#ef4444'; scoreLabel = 'Poor'; }
 		if (score < 40) { scoreColor = '#dc2626'; scoreLabel = 'Very Poor'; }
 		
-		scoreTd.innerHTML = `<strong style="color: ${scoreColor}; font-size: 18px;">${score}/100</strong> <span style="color: ${scoreColor};">(${scoreLabel})</span>
-			<br><small style="color: #6b7280; font-style: italic;">Measures basic on-page SEO elements only. Does not include backlinks, site speed, or technical SEO.</small>`;
+		// Create score display with DOM methods instead of innerHTML
+		const scoreStrong = document.createElement('strong');
+		scoreStrong.style.color = scoreColor;
+		scoreStrong.style.fontSize = '18px';
+		scoreStrong.textContent = `${score}/100`;
+
+		const scoreSpan = document.createElement('span');
+		scoreSpan.style.color = scoreColor;
+		scoreSpan.textContent = ` (${scoreLabel})`;
+
+		const lineBreak = document.createElement('br');
+
+		const disclaimer = document.createElement('small');
+		disclaimer.style.color = '#6b7280';
+		disclaimer.style.fontStyle = 'italic';
+		disclaimer.textContent = 'Measures basic on-page SEO elements only. Does not include backlinks, site speed, or technical SEO.';
+
+		scoreTd.appendChild(scoreStrong);
+		scoreTd.appendChild(scoreSpan);
+		scoreTd.appendChild(lineBreak);
+		scoreTd.appendChild(disclaimer);
 		
 		scoreRow.appendChild( scoreTh );
 		scoreRow.appendChild( scoreTd );
