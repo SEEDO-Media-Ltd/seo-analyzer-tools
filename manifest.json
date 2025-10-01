@@ -7,10 +7,7 @@
   "homepage_url": "https://seedo.media",
   "browser_specific_settings": {
     "gecko": {
-      "id": "seatools@seedo.media",
-      "data_collection_permissions": {
-        "optional": []
-      }
+      "id": "seatools@seedo.media"
     }
   },
   "icons": {
