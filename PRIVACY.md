@@ -34,7 +34,7 @@ Your premium subscription status is stored locally in your browser only. This da
 - No advertising services
 
 ## Changes to This Policy
-We may update this privacy policy from time to time. Changes will be posted at https://github.com/SEEDO-Media-Ltd/seo-analyzer-tools/blob/main/PRIVACY.md
+We may update this privacy policy from time to time. The latest version will always be available at https://seedo.media/seo-analyzer-tools/privacy
 
 ## Contact
 For privacy concerns or questions: contact@seedo.media
