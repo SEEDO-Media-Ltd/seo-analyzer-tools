@@ -142,39 +142,34 @@ This is a browser extension called "SEO Analyzer by Slim SEO" that analyzes web 
 ## Current Issues & Debugging (Latest Session)
 
 ### Account Tab DOM Insertion Error
-**Status**: ❌ **UNRESOLVED** - Account tab not appearing due to DOM insertion error
+**Status**: ✅ **RESOLVED** - Fixed in v20-v21
 
-**Problem**: Account tab functionality broken with DOM insertion error:
-```
-Node.insertBefore: Child to insert before is not a child of this node
-```
+**Problem**: Account tab appearing after close button (X) instead of after Export tab.
 
-**Error Location**: Line 1064 in `addAccountTab()` function:
+**Root Cause**: Incorrect DOM element selection in `renderExportPane()` function (line 861):
 ```javascript
-tabsContainer.parentNode.insertBefore(accountPipeSeparator, closeButton);
+// INCORRECT (was selecting header instead of tabsContainer)
+const tabsContainer = shadowRoot.querySelector('div').querySelector('div');
 ```
 
-**Attempted Fixes** (v16-v19):
-- ❌ Updated function signature to match v15: `addAccountTab(user, tabsContainer, panel, setupTabSwitching)`
-- ❌ Changed DOM insertion logic to use `tabsContainer.parentNode.insertBefore()` directly
-- ❌ Added conditional setupTabSwitching logic
-- ❌ Multiple zip compilations and testing iterations
+**Solution** (v20-v21):
+- Fixed querySelector chain to correctly navigate: shadowRoot → #panel → header → tabsContainer
+- Changed `addAccountTab()` to use simple `appendChild()` instead of complex `insertBefore()` logic
+- Updated `removeAccountTab()` to use shadowRoot.querySelectorAll instead of document.querySelectorAll
 
-**DOM Structure Analysis**:
+**Final Implementation**:
+```javascript
+// seo-analyzer.js:861-863
+const panel = shadowRoot.querySelector('#panel');
+const header = panel.querySelector('div'); // First div in panel is header
+const tabsContainer = header.querySelector('div'); // First div in header is tabsContainer
 ```
-header
-  ├── tabsContainer (contains Meta Tags | Schemas | Issues | Export tabs)
-  └── closeButton (title="Close Analyzer")
-```
 
-**Root Cause**: The error suggests `closeButton` is not actually a child of `tabsContainer.parentNode` when `addAccountTab` is called, indicating a scope or timing issue in DOM element relationships.
-
-**Working Reference**: v15 version in `/seo-analyzer-tools-v15-for-reference/` contains exact same DOM insertion logic but functions correctly.
-
-**Next Steps**:
-- Need systematic debugging of actual DOM structure at runtime
-- Consider direct reference storage instead of querySelector approach
-- May require rollback to working v15 baseline and incremental changes
+**Completed Fixes**:
+- ✅ Account tab now appears in correct order: Meta Tags | Schemas | Issues | Export | Account
+- ✅ Tab only appears for premium users (paid or trial)
+- ✅ All Shadow DOM references corrected
+- ✅ Tested and working in v21
 
 ### Export Tab Improvements
 **Status**: ✅ **COMPLETED** - Export styling and structure fixed
@@ -186,3 +181,22 @@ header
 - ✅ Maintains premium gating functionality with ExtPay integration
 
 **Current State**: Export functionality working correctly with improved UI matching v15 reference
+
+## Latest Release
+
+**Version**: v21 (seo-analyzer-tools-v21.zip)
+**Status**: ✅ Production Ready
+**Release Date**: October 1, 2025
+
+**What's Working**:
+- ✅ Full SEO analysis (meta tags, schemas, issues, scoring)
+- ✅ ExtPay premium integration
+- ✅ Export functionality (JSON, CSV, Text) behind paywall
+- ✅ Account tab appearing correctly for premium users
+- ✅ Clean tab ordering: Meta Tags | Schemas | Issues | Export | Account
+- ✅ Shadow DOM isolation working properly
+- ✅ All pricing tiers functional ($1.99/month, $25 lifetime)
+
+**Known Limitations**:
+- Firefox only (Chrome/Edge support planned)
+- Export works one page at a time (bulk export planned)

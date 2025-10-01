@@ -1,0 +1,17 @@
+# Distribution folder (excluded per CLAUDE.md - /dist is for testing only)
+dist/
+
+# Old versions and archives
+old zips/
+*.zip
+
+# Reference folders
+*-for-reference/
+
+# macOS
+.DS_Store
+
+# Temporary files
+icon.acorn
+icon.png
+icons_orginal/

@@ -858,8 +858,9 @@
 				// Add Account tab for premium users if not already added
 				if (premium.user && !dynamicAccountTab) {
 					const shadowRoot = document.querySelector('[data-sa-analyzer]').shadowRoot;
-					const tabsContainer = shadowRoot.querySelector('div').querySelector('div'); // Header div contains tabs
 					const panel = shadowRoot.querySelector('#panel');
+					const header = panel.querySelector('div'); // First div in panel is header
+					const tabsContainer = header.querySelector('div'); // First div in header is tabsContainer
 					// Note: setupTabSwitching is not available in this scope, so passing null
 					addAccountTab(premium.user, tabsContainer, panel, null);
 				}
@@ -1057,17 +1058,9 @@
 		dynamicAccountPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
 		dynamicAccountPane.setAttribute('data-account-element', 'true');
 
-		// Insert Account tab in correct position (before close button)
-		// Find the close button and insert before it
-		const closeButton = tabsContainer.parentNode.querySelector('button[title="Close Analyzer"]');
-		if (closeButton) {
-			tabsContainer.parentNode.insertBefore(accountPipeSeparator, closeButton);
-			tabsContainer.parentNode.insertBefore(dynamicAccountTab, closeButton);
-		} else {
-			// Fallback: add to tabs container
-			tabsContainer.appendChild(accountPipeSeparator);
-			tabsContainer.appendChild(dynamicAccountTab);
-		}
+		// Add Account tab to tabs container (after Export tab)
+		tabsContainer.appendChild(accountPipeSeparator);
+		tabsContainer.appendChild(dynamicAccountTab);
 		panel.appendChild(dynamicAccountPane);
 
 		// Store references
@@ -1084,9 +1077,12 @@
 	}
 
 	function removeAccountTab() {
-		// Remove all account-related elements
-		const accountElements = document.querySelectorAll('[data-account-element="true"]');
-		accountElements.forEach(el => el.remove());
+		// Remove all account-related elements from Shadow DOM
+		const shadowRoot = document.querySelector('[data-sa-analyzer]').shadowRoot;
+		if (shadowRoot) {
+			const accountElements = shadowRoot.querySelectorAll('[data-account-element="true"]');
+			accountElements.forEach(el => el.remove());
+		}
 
 		dynamicAccountTab = null;
 		dynamicAccountPane = null;
