@@ -1,6 +1,6 @@
 ( function () {
 	// --- Configuration ---
-	const ANALYZER_ID = 'sa';
+	const ANALYZER_ID = 'sat';
 
 	// --- Helper Functions ---
 	function getMaxZIndex() {
@@ -121,19 +121,9 @@
 			}
 
 			if ( property && property.startsWith( 'og:' ) ) {
-				// Preview the image for og:image
-				if ( property === 'og:image' ) {
-					ogTags[ property ] = `<a href="${ content }" target="_blank" rel="noopener noreferrer">${ content }<br><br><img src="${ content }"></a>`;
-				} else {
-					ogTags[ property ] = content;
-				}
+				ogTags[ property ] = content;
 			} else if ( name && name.startsWith( 'twitter:' ) ) {
-				// Preview the image for twitter:image
-				if ( name === 'twitter:image' ) {
-					twitterTags[ name ] = `<a href="${ content }" target="_blank" rel="noopener noreferrer">${ content }<br><br><img src="${ content }"></a>`;
-				} else {
-					twitterTags[ name ] = content;
-				}
+				twitterTags[ name ] = content;
 			} else if ( name && tagNames.has( name ) ) {
 				standardTags[ name ] = content;
 			}
@@ -421,8 +411,8 @@
 			const td = document.createElement( 'td' );
 			td.className = 'p-2 break-all';
 
-			// Check if this is an image field (common schema.org image properties)
-			const isImageField = isImage || ( key && ( key === 'image' || key === 'logo' || key === 'thumbnail' || key === 'thumbnailUrl' || key === 'contentUrl' ) );
+			// Check if this is an image field (common schema.org image properties + og:image + twitter:image)
+			const isImageField = isImage || ( key && ( key === 'image' || key === 'logo' || key === 'thumbnail' || key === 'thumbnailUrl' || key === 'contentUrl' || key === 'og:image' || key === 'twitter:image' ) );
 
 			if ( typeof value === 'string' && ( value.startsWith( 'http://' ) || value.startsWith( 'https://' ) ) && forceLink ) {
 				// If it's an image field and a URL, show preview
