@@ -13,7 +13,7 @@
 	}
 
 	function getStyles() {
-		return `.fixed{position:fixed}.relative{position:relative}.right-0{right:0}.top-0{top:0}.mb-0{margin-bottom:0}.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.table{display:table}.hidden{display:none}.h-full{height:100%}.w-48{width:12rem}.w-full{width:100%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-1{gap:.25rem}.gap-4{gap:1rem}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.border{border-width:1px}.border-0{border-width:0}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-solid{border-style:solid}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.bg-accent{--tw-bg-opacity:1;background-color:rgb(239 122 55/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-2{padding:.5rem}.p-4{padding:1rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-lg{font-size:18px}.text-sm{font-size:14px}.font-bold{font-weight:700}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.text-accent{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-inherit{color:inherit}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.indent-4{text-indent:1rem}.indent-8{text-indent:2rem}.indent-12{text-indent:3rem}.indent-16{text-indent:4rem}.indent-20{text-indent:5rem}.indent-24{text-indent:6rem}:host{--color-gray-300:#d1d5db}*{box-sizing:border-box;margin:0;padding:0}ul{list-stype:none}#panel{width:500px;max-width:95vw}details[open] summary{border-bottom:1px solid var(--color-gray-300)}tr:last-child{border-bottom:none}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.hover\:opacity-80:hover{opacity:0.8}`;
+		return `.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.right-0{right:0}.top-0{top:0}.mb-0{margin-bottom:0}.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.table{display:table}.hidden{display:none}.h-full{height:100%}.w-48{width:12rem}.w-full{width:100%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-1{gap:.25rem}.gap-4{gap:1rem}.overflow-y-auto{overflow-y:auto}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.border{border-width:1px}.border-0{border-width:0}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-solid{border-style:solid}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-accent{--tw-bg-opacity:1;background-color:rgb(239 122 55/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-2{padding:.5rem}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-px{padding-top:1px;padding-bottom:1px}.pl-4{padding-left:1rem}.pl-8{padding-left:2rem}.pl-9{padding-left:2.25rem}.pl-12{padding-left:3rem}.pl-16{padding-left:4rem}.pl-20{padding-left:5rem}.pl-24{padding-left:6rem}.text-left{text-align:left}.text-center{text-align:center}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-lg{font-size:18px}.text-sm{font-size:14px}.font-bold{font-weight:700}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.text-accent{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-inherit{color:inherit}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.indent-4{text-indent:1rem}.indent-8{text-indent:2rem}.indent-12{text-indent:3rem}.indent-16{text-indent:4rem}.indent-20{text-indent:5rem}.indent-24{text-indent:6rem}.indent-28{text-indent:7rem}.indent-32{text-indent:8rem}.indent-36{text-indent:9rem}.indent-40{text-indent:10rem}.left-0{left:0}.left-4{left:1rem}.left-8{left:2rem}.left-12{left:3rem}.left-16{left:4rem}.left-20{left:5rem}.left-24{left:6rem}:host{--color-gray-300:#d1d5db}*{box-sizing:border-box;margin:0;padding:0}img{max-width:100%;height:auto}ul{list-stype:none}#panel{width:600px;max-width:95vw}details[open] summary{border-bottom:1px solid var(--color-gray-300)}tr:last-child{border-bottom:none}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(239 122 55/var(--tw-text-opacity,1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.hover\:opacity-80:hover{opacity:0.8}`;
 	}
 
 	const isPlainObject = obj => obj !== null && typeof obj === 'object' && Object.getPrototypeOf( obj ) === Object.prototype;
@@ -43,7 +43,7 @@
 
 	function createPremiumUpgradePrompt() {
 		const upgradeDiv = document.createElement('div');
-		upgradeDiv.className = 'p-4 border border-solid border-gray-300 bg-gray-50 rounded text-center';
+		upgradeDiv.className = 'p-4 border border-solid border-gray-300 bg-gray-50 rounded';
 
 		// Title
 		const title = document.createElement('div');
@@ -53,8 +53,8 @@
 
 		// Description
 		const description = document.createElement('div');
-		description.className = 'mb-4 text-sm text-gray-700';
-		description.textContent = 'Export your SEO data in multiple formats (JSON, CSV, Text Reports)';
+		description.className = 'mb-4 text-sm text-gray-700 text-left';
+		description.innerHTML = '<p class="mb-2">Export your SEO data in multiple formats (JSON, CSV, Text Reports)</p><p class="mb-2"><strong>What\'s included:</strong></p><ul style="list-style: disc; padding-left: 2rem;"><li>Meta Tags (title, description, Open Graph, Twitter/X)</li><li>Schema.org structured data (JSON-LD)</li><li>Headings hierarchy (H1-H6 structure)</li><li>SEO Issues & Score analysis</li><li>Page URL & timestamp</li></ul>';
 		upgradeDiv.appendChild(description);
 
 		// Pricing
@@ -65,7 +65,7 @@
 
 		// Button container
 		const buttonContainer = document.createElement('div');
-		buttonContainer.className = 'flex items-center justify-center gap-4';
+		buttonContainer.className = 'flex items-center gap-4';
 
 		// Upgrade button
 		const upgradeBtn = document.createElement('button');
@@ -121,9 +121,19 @@
 			}
 
 			if ( property && property.startsWith( 'og:' ) ) {
-				ogTags[ property ] = content;
+				// Preview the image for og:image
+				if ( property === 'og:image' ) {
+					ogTags[ property ] = `<a href="${ content }" target="_blank" rel="noopener noreferrer">${ content }<br><br><img src="${ content }"></a>`;
+				} else {
+					ogTags[ property ] = content;
+				}
 			} else if ( name && name.startsWith( 'twitter:' ) ) {
-				twitterTags[ name ] = content;
+				// Preview the image for twitter:image
+				if ( name === 'twitter:image' ) {
+					twitterTags[ name ] = `<a href="${ content }" target="_blank" rel="noopener noreferrer">${ content }<br><br><img src="${ content }"></a>`;
+				} else {
+					twitterTags[ name ] = content;
+				}
 			} else if ( name && tagNames.has( name ) ) {
 				standardTags[ name ] = content;
 			}
@@ -175,6 +185,20 @@
 		} );
 
 		return schemas;
+	}
+
+	function getHeadings() {
+		const headings = [];
+		const headingElements = document.querySelectorAll( 'h1, h2, h3, h4, h5, h6' );
+
+		headingElements.forEach( heading => {
+			const level = parseInt( heading.tagName.charAt( 1 ) );
+			const text = heading.textContent.trim();
+
+			headings.push( { level, text, element: heading } );
+		} );
+
+		return headings;
 	}
 
 	function checkSEOIssues() {
@@ -353,6 +377,15 @@
 				return;
 			}
 
+			// Check if this is an image field
+			const isImageField = key && ( key === 'image' || key === 'logo' || key === 'thumbnail' || key === 'thumbnailUrl' || key === 'contentUrl' );
+
+			// Special handling for ImageObject - if image field has object with url property, extract it
+			if ( isImageField && isPlainObject( value ) && value.url ) {
+				pairs.push( { key, value: value.url, depth, isImage: true } );
+				return;
+			}
+
 			// Nested array.
 			if ( Array.isArray( value ) ) {
 				pairs.push( { key, value: '', depth } );
@@ -370,7 +403,7 @@
 		parseKeyValue( key, value, depth );
 
 		pairs.forEach( pair => {
-			const { key, value, depth } = pair;
+			const { key, value, depth, isImage } = pair;
 
 			// Ignore empty pairs.
 			if ( !key && !value ) {
@@ -386,17 +419,25 @@
 			th.textContent = key;
 
 			const td = document.createElement( 'td' );
-			td.className = 'p-2';
+			td.className = 'p-2 break-all';
+
+			// Check if this is an image field (common schema.org image properties)
+			const isImageField = isImage || ( key && ( key === 'image' || key === 'logo' || key === 'thumbnail' || key === 'thumbnailUrl' || key === 'contentUrl' ) );
 
 			if ( typeof value === 'string' && ( value.startsWith( 'http://' ) || value.startsWith( 'https://' ) ) && forceLink ) {
-				const a = document.createElement( 'a' );
-				a.href = value;
-				a.target = '_blank';
-				a.rel = 'noopener noreferrer';
-				a.textContent = value;
-				td.appendChild( a );
+				// If it's an image field and a URL, show preview
+				if ( isImageField ) {
+					td.innerHTML = `<a href="${ value }" target="_blank" rel="noopener noreferrer">${ value }<br><br><img src="${ value }"></a>`;
+				} else {
+					const a = document.createElement( 'a' );
+					a.href = value;
+					a.target = '_blank';
+					a.rel = 'noopener noreferrer';
+					a.textContent = value;
+					td.appendChild( a );
+				}
 			} else {
-				td.textContent = String( value );
+				td.innerHTML = value;
 			}
 
 			tr.appendChild( th );
@@ -526,6 +567,60 @@
 			details.appendChild( table );
 			container.appendChild( details );
 		} );
+	}
+
+	function renderHeadings( container, headings ) {
+		if ( !headings || headings.length === 0 ) {
+			container.innerHTML = `<p class="italic text-muted">No headings found.</p>`;
+			return;
+		}
+
+		container.innerHTML = '';
+
+		const table = document.createElement( 'table' );
+		table.className = 'border-collapse w-full';
+
+		headings.forEach( heading => {
+			const tr = document.createElement( 'tr' );
+			tr.className = 'border-0 border-b border-solid border-gray-300';
+
+			const td = document.createElement( 'td' );
+			td.className = `text-left relative py-2 pl-${ ( heading.level - 1 ) * 4 } cursor-pointer`;
+
+			const div = document.createElement( 'div' );
+			div.className = 'pl-9';
+
+			const badge = document.createElement( 'span' );
+			badge.className = `font-bold px-1 py-px bg-gray-100 rounded absolute left-${ ( heading.level - 1 ) * 4 }`;
+			badge.textContent = `H${ heading.level }`;
+
+			div.appendChild( badge );
+			div.appendChild( document.createTextNode( heading.text ) );
+			td.appendChild( div );
+			td.title = 'Scroll to this heading';
+
+			td.addEventListener( 'click', () => {
+			// Scroll to element
+			heading.element.scrollIntoView( { behavior: 'smooth', block: 'center' } );
+
+			// Add highlight effect
+			const originalOutline = heading.element.style.outline;
+			const originalBackgroundColor = heading.element.style.backgroundColor;
+			heading.element.style.outline = '3px solid #EF7A37';
+			heading.element.style.backgroundColor = 'rgba(239, 122, 55, 0.1)';
+
+			// Remove highlight after 2 seconds
+			setTimeout( () => {
+				heading.element.style.outline = originalOutline;
+				heading.element.style.backgroundColor = originalBackgroundColor;
+			}, 2000 );
+		} );
+
+			tr.appendChild( td );
+			table.appendChild( tr );
+		} );
+
+		container.appendChild( table );
 	}
 
 	function renderIssues( container, issues ) {
@@ -768,6 +863,11 @@
 		schemaTab.dataset.tab = 'schemas';
 		schemaTab.textContent = 'Schemas';
 
+		const headingsTab = document.createElement( 'button' );
+		headingsTab.className = 'tab bg-transparent border-0 transition-all py-4 cursor-pointer font-bold text-gray-700 hover:text-accent';
+		headingsTab.dataset.tab = 'headings';
+		headingsTab.textContent = 'Headings';
+
 		const issuesTab = document.createElement( 'button' );
 		issuesTab.className = 'tab bg-transparent border-0 transition-all py-4 cursor-pointer font-bold text-gray-700 hover:text-accent';
 		issuesTab.dataset.tab = 'issues';
@@ -788,6 +888,7 @@
 
 		tabsContainer.appendChild( metaTab );
 		tabsContainer.appendChild( schemaTab );
+		tabsContainer.appendChild( headingsTab );
 		tabsContainer.appendChild( issuesTab );
 		tabsContainer.appendChild( pipeSeparator );
 		tabsContainer.appendChild( exportTab );
@@ -813,6 +914,11 @@
 		schemasPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
 		schemasPane.innerHTML = `<em class="text-muted">Loading Schema Data...</em>`;
 
+		const headingsPane = document.createElement( 'div' );
+		headingsPane.dataset.tab = 'headings';
+		headingsPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
+		headingsPane.innerHTML = `<em class="text-muted">Loading Headings...</em>`;
+
 		const issuesPane = document.createElement( 'div' );
 		issuesPane.dataset.tab = 'issues';
 		issuesPane.className = 'pane flex-grow overflow-y-auto p-4 hidden';
@@ -829,6 +935,7 @@
 		panel.appendChild( header );
 		panel.appendChild( metaTagsPane );
 		panel.appendChild( schemasPane );
+		panel.appendChild( headingsPane );
 		panel.appendChild( issuesPane );
 		panel.appendChild( exportPane );
 		shadowRoot.appendChild( panel );
@@ -836,13 +943,14 @@
 		// Render initial content.
 		renderMetaTags( metaTagsPane, getMetaTags() );
 		renderSchemas( schemasPane, getSchemas() );
+		renderHeadings( headingsPane, getHeadings() );
 		renderIssues( issuesPane, checkSEOIssues() );
 
 		// Append the host to the document body
 		document.body.appendChild( host );
 
 		// Tab switching logic
-		[ metaTab, schemaTab, issuesTab, exportTab ].forEach( tab => tab.addEventListener( 'click', async () => {
+		[ metaTab, schemaTab, headingsTab, issuesTab, exportTab ].forEach( tab => tab.addEventListener( 'click', async () => {
 			shadowRoot.querySelectorAll( '.tab' ).forEach( t => {
 				t.classList.remove( 'text-accent' );
 				t.classList.add( 'text-gray-700' );
@@ -1216,7 +1324,17 @@
 			flatData.push( { section: `Schema ${ index + 1 } (${ schema[ '@type' ] || 'Unknown' })`, ...flattened } );
 			Object.keys( flattened ).forEach( key => headers.add( key ) );
 		} );
-		
+
+		// Add headings
+		data.headings.forEach( ( heading, index ) => {
+			const flattened = {
+				[`heading${ index + 1 }.level`]: heading.level,
+				[`heading${ index + 1 }.text`]: heading.text
+			};
+			flatData.push( { section: `Heading ${ index + 1 } (H${ heading.level })`, ...flattened } );
+			Object.keys( flattened ).forEach( key => headers.add( key ) );
+		} );
+
 		// Add issues
 		data.issues.forEach( ( issue, index ) => {
 			const flattened = {
@@ -1290,7 +1408,18 @@
 				} );
 			} );
 		}
-		
+
+		// Headings
+		lines.push( '\n=== HEADINGS HIERARCHY ===' );
+		if ( data.headings.length === 0 ) {
+			lines.push( 'No headings found.' );
+		} else {
+			data.headings.forEach( heading => {
+				const indent = '  '.repeat( heading.level - 1 );
+				lines.push( `${ indent }H${ heading.level }: ${ heading.text }` );
+			} );
+		}
+
 		// Issues
 		lines.push( '\n=== SEO ISSUES ===' );
 		if ( data.issues.length === 0 ) {
@@ -1328,8 +1457,9 @@
 	function exportData( format ) {
 		const metaTags = getMetaTags();
 		const schemas = getSchemas();
+		const headings = getHeadings().map(h => ({ level: h.level, text: h.text })); // Strip element reference
 		const issues = checkSEOIssues();
-		const data = { metaTags, schemas, issues, url: window.location.href, timestamp: new Date().toISOString() };
+		const data = { metaTags, schemas, headings, issues, url: window.location.href, timestamp: new Date().toISOString() };
 		
 		let content, mimeType;
 		const filename = generateFilename( format );
