@@ -427,7 +427,17 @@
 			if ( typeof value === 'string' && ( value.startsWith( 'http://' ) || value.startsWith( 'https://' ) ) && forceLink ) {
 				// If it's an image field and a URL, show preview
 				if ( isImageField ) {
-					td.innerHTML = `<a href="${ value }" target="_blank" rel="noopener noreferrer">${ value }<br><br><img src="${ value }"></a>`;
+					const a = document.createElement( 'a' );
+				a.href = value;
+				a.target = '_blank';
+				a.rel = 'noopener noreferrer';
+				a.textContent = value;
+				td.appendChild( a );
+				td.appendChild( document.createElement( 'br' ) );
+				td.appendChild( document.createElement( 'br' ) );
+				const img = document.createElement( 'img' );
+				img.src = value;
+				td.appendChild( img );
 				} else {
 					const a = document.createElement( 'a' );
 					a.href = value;
@@ -437,7 +447,7 @@
 					td.appendChild( a );
 				}
 			} else {
-				td.innerHTML = value;
+				td.textContent = String( value );
 			}
 
 			tr.appendChild( th );
