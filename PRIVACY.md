@@ -70,7 +70,7 @@ We may update this privacy policy from time to time. The latest version will alw
 - GitHub: https://github.com/SEEDO-Media-Ltd/seo-analyzer-tools/blob/main/PRIVACY.md
 
 ## Store Listings
-- **Firefox Add-ons:** [Pending approval]
+- **Firefox Add-ons:** https://addons.mozilla.org/en-GB/firefox/addon/seo-analyzer-tools/
 - **Chrome Web Store:** [Pending submission]
 
 ## Contact
